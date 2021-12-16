@@ -1,5 +1,4 @@
 # Team 4: Uber For Duckies
-============================
 Students: Cynthia Li, Shinny Sun
 
 This is the Github repository for team 4's Robotics 1 final project. Our project
