@@ -10,6 +10,7 @@ from sensor_msgs.msg import CompressedImage
 from duckietown_msgs.msg import Twist2DStamped
 
 class TagDetectionNode():
+    #This is a ROS node for apriltag and duckie detection
     def __init__(self):
         self.node_name = "TagDetectorNode"
 
