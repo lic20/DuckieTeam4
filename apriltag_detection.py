@@ -1,3 +1,7 @@
+#Author: Cynthia Li
+#Date uploaded: 12/15/2021
+#Program description: object detection for our Duckiebot and output if the Duckiebot
+#should move forward or stop
 import cv2
 import apriltag
 import pyautogui
@@ -20,7 +24,7 @@ def duckie_detection(img):
     print("Duckie in image ratio:", result)
     return result
 
-
+#output the size of my window screen
 screenWidth, screenHeight = pyautogui.size()
 screen_size = (screenWidth, screenHeight)
 print(screen_size)
@@ -48,6 +52,7 @@ while True: #keep generating new image from Duckiebot's camera until shutdown
     color = (0, 0, 255)
     thickness = 2
     tag_list = []
+    #go over each tag detected from the apriltag detector
     for det in result:
         start_point = (int(det.corners[1][0]), int(det.corners[1][1]))
         end_point = (int(det.corners[3][0]),int(det.corners[3][1]))
@@ -61,9 +66,9 @@ while True: #keep generating new image from Duckiebot's camera until shutdown
     #print(len(tag_list))
     
 
-    if len(tag_list) == 0:
+    if len(tag_list) == 0: #no tag is detected
         go_forward = False
-    else:
+    else: #tags are detected
         started = True
         closest_tag = tag_list[-1]
         print(closest_tag['size'])
