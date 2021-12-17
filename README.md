@@ -8,7 +8,12 @@ lane following, and the mechanical/electrical for a duckie grabber.
 Scripts:
 --------
 - Robotics1_Duckie_Picker.ino: This is the script for remote controlling the duckie grabber. 
+-   Execution: Upload this code to an Arduino Uno and run it from there
 - apriltag_detection.py: This is the script for running object detectin for apriltag and duckie
+-   Execution: 
+-   Make sure the dts keyboard control GUI is up and being place on the top right corner of your screen, and rqt_image_view is up from the Duckiebot's ROS container.
+-   Don't block the camera image with any application
+-   Then run python apriltag_detection.py 
 
 Special Note:
 --------------
